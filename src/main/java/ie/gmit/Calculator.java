@@ -8,6 +8,10 @@ public class Calculator {
         this.firstNum = f;
         this.secondNum = s;
     }
+    Calculator(){
+        firstNum = 1;
+        secondNum = 1;
+    }
 
     public int getFirstNum() {
         return firstNum;
