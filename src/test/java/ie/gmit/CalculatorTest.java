@@ -1,35 +1,54 @@
 package ie.gmit;
 
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 public class CalculatorTest {
     int a = 5;
     int b = 5;
     Calculator c1 = new Calculator(a, b);
 
-
+    @Test
     void addTest(){
-      c1.add();
+     int result = c1.add();
+     assertEquals(10, result, 0);
     }
+    @Test
     void subtractTest(){
-        c1.subtract();
+        int result = c1.subtract();
+        assertEquals(0, result, 0);
     }
+    @Test
     void multiplyTest(){
-        c1.multiply();
+        int result = c1.multiply();
+        assertEquals(25, result, 0);
     }
+    @Test
     void divideTest(){
-        c1.divide();
-    }
+        int result = c1.divide();
+        assertEquals(1, result, 0);
 
+    }
+    @Test
     void addWithParamTest(){
-        c1.add(a, b);
+        int result = c1.add(a, b);
+        assertEquals(10, result, 0);
     }
+    @Test
     void subtractWithParamTest(){
-        c1.subtract(a, b);
+        int result = c1.subtract(a, b);
+        assertEquals(0, result, 0);
     }
+    @Test
     void multiplyWithParamTest(){
-        c1.multiply(a, b);
+        int result = c1.multiply(a, b);
+        assertEquals(25, result, 0);
     }
+    @Test
     void divideWithParamTest(){
-        c1.divide(a, b);
+        int result = c1.divide(a, b);
+        assertEquals(1, result, 0);
     }
 
 }
